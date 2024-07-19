@@ -18,13 +18,11 @@ def get_salas(request):
     if request.method == 'GET':
         salas = Sala.objects.all().order_by("id_sala")
 
-        # Parâmetros de consulta para pesquisa
         nome = request.GET.get('nome')
         localizacao = request.GET.get('localizacao')
         capacidade_min = request.GET.get('capacidade_min')
         capacidade_max = request.GET.get('capacidade_max')
 
-        # Filtragem dos resultados
         if nome:
             salas = salas.filter(nome__icontains=nome)
         if localizacao:
@@ -34,7 +32,6 @@ def get_salas(request):
         if capacidade_max:
             salas = salas.filter(capacidade__lte=capacidade_max)
 
-        # Paginação
         page = request.GET.get('page', 1)
         page_size = request.GET.get('page_size', 10)
 
@@ -68,7 +65,6 @@ def get_reservas(request):
     if request.method == 'GET':
         reservas = Reserva.objects.all().order_by("id_reserva")
 
-        # Parâmetros de consulta para pesquisa
         reservado_por = request.GET.get('reservado_por')
         hora_inicio_min = request.GET.get('hora_inicio_min')
         hora_inicio_max = request.GET.get('hora_inicio_max')
@@ -77,7 +73,6 @@ def get_reservas(request):
         proposito = request.GET.get('proposito')
         sala = request.GET.get('sala')
 
-        # Filtragem dos resultados
         if reservado_por:
             reservas = reservas.filter(reservado_por__icontains=reservado_por)
         if hora_inicio_min:
@@ -93,7 +88,7 @@ def get_reservas(request):
         if sala:
             reservas = reservas.filter(sala=sala)
 
-        # Paginação
+
         page = request.GET.get('page', 1)
         page_size = request.GET.get('page_size', 10)
 
@@ -175,7 +170,6 @@ def sala_manage(request):
             return Response({"message": "Parâmetro 'id_sala' é obrigatório."}, status=status.HTTP_400_BAD_REQUEST)
 
     return Response(status=status.HTTP_400_BAD_REQUEST)
-
 
 
 @api_view(['GET', 'POST', 'PUT', 'DELETE'])
