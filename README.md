@@ -1,8 +1,19 @@
 # Descrição do projeto.
 
-Projeto criado usando Django e Django Rest Framework. A API fornece endpoints para gerenciar criação e reservas de sala. </br>
-Ele foi essencialmente pensado para que eu pudesse aplicar conceitos que eu já conhecia junto a novos conhecimentos que eu adquiri através da documentação do DRF. </br>
-API Oferece funcionalidades como Pesquisa, Ordenação e Paginação.
+Projeto desenvolvido utilizando Django e Django Rest Framework. A API fornece endpoints para gerenciar a criação e reservas de salas.
+
+Este projeto foi pensado para consolidar conceitos que eu já conhecia e explorar novos aprendizados, especialmente através da documentação oficial do DRF.
+
+A API oferece funcionalidades como:
+
+🔍 Pesquisa
+🔀 Ordenação
+📋 Paginação
+
+Além disso, o projeto inclui:
+
+- Testes unitários para validar os principais endpoints e garantir confiabilidade.
+- Documentação interativa criada com Swagger, facilitando o uso e entendimento dos endpoints.
 ## Base URL
 
 `/api/`
