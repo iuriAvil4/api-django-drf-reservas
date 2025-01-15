@@ -12,7 +12,7 @@ A API oferece funcionalidades como:
 
 Além disso, o projeto inclui:
 
-- Testes unitários para validar os principais endpoints e garantir confiabilidade.
+- Testes unitários para validar todos os endpoints e garantir confiabilidade.
 - Documentação interativa criada com Swagger, facilitando o uso e entendimento dos endpoints.
 ## Base URL
 
